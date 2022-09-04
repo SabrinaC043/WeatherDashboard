@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css>
-    <link href=""
-    <link rel="stylesheet" href="./assets/Weather.css">
+    <link rel="stylesheet" href="./assets/Weather.css"/>
     <title>Weather Forecast 5 Day </title>
 </head>
 
@@ -16,14 +15,13 @@
     <section id="TitleContainer">
     <h1> Weather Dashboard </h1>
     <section container="sidebar" class="list-group">
-        <label for="cityListData" class="form-label">Search City</label>
+        <label id="searchTitle" class="form-label">Search for a City</label>
         <input class="form-control" list="datalistOptions" id="searchCityList" placeholder="Type in a city to search weather updates...">
         <datalist id="datalistOptions">
           <option value="Denver">
           <option value="Houston">
           <option value="Seattle">
-          <option value="Tuscon">
-          <option value="Thornton">
+          <option value="Dallas">
         </datalist>
             <button type="search-button" class="btn btn-primary">Search</button>
           Your search must be a city location. (ex: Denver, Houston)
@@ -31,7 +29,6 @@
     </section>
 <section id="sameDayLgDisplay">
     <div class="card mb-3">
-        <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>

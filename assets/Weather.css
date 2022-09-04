@@ -1,11 +1,33 @@
 
-body {
-    background-color:blue;
+h1 {
+    background:rgb(233, 248, 248);
+    color:cornflowerblue;
+    text-align: center;
+}
+
+
+.list-group{
+    display:inline-block;
+}
+
+
+.form-label{
+
+    font-size: 18px;
+    font-weight:bold;
+
 }
 
 
 
-h1 {
-    background:lightcyan;
-    color:cornflowerblue;
+
+
+
+
+
+
+
+
+@media screen {
+    
 }
