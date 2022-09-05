@@ -7,83 +7,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css>
-    <link rel="stylesheet" href="./assets/Weather.css" />
+    <link rel="stylesheet" href="./assets/weather.css">
     <title>Weather Forecast 5 Day </title>
 </head>
 
 <body>
-    <section id="TitleContainer">
-        <h1> Weather Dashboard </h1>
-        <section container="sidebar" class=" list-group flex-column sidebar">
-            <label id="searchTitle" class="form-label">Search for a City:</label>
-            <input class="form-control" list="datalistOptions" id="searchCityList"
-                placeholder="Type in a city to search">
-            <datalist id="datalistOptions">
-                <option value="Denver">
-                <option value="Houston">
-                <option value="Seattle">
-                <option value="Dallas">
-            </datalist>
-            <button type="search-button" class="searchcitybtn">Search</button>
-            <text> Your search must be a city location.(ex: Denver, Houston)</text>
-            </div>
-        <div id="sameDayLgDisplay">
-            <div class="card flex-column mb-3 Dallas">
-                <div class="card-body weatherconditions">
-                    <h5 class="card-title Dallas">Dallas</h5>
-                    <p class="card-text" id="largeCardText"></p>
+    <header class="p-2 container-fluid text-center bg-$purple-400 text-white">
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main class="row container-fluid">
+        <div  class="list-group sidebar col-md-2">
+            <form id="search-form">
+                <label class="form-label" for="searcgCityList">Search for a City:</label>
+                <input class="form-control"  id="userInput"
+                placeholder="Type in a city">
+                <button type="submit" class="searchcitybtn btn btn-primary">Search</button>
+                <p> Your search must be a city location.(ex: Denver, Houston)</p>
+            </form>
+            <hr>
+            <div id="searchHistory"></div>
+        </div>
+        <div class="col-md-10">
+             <section id="sameDayLgDisplay">
+            <!-- <div class="card mb-3  Dallas">
+                <div class="card-body dallasCard">
+                    <h5 class="card-title dallas">Dallas</h5>
+                    <p class="card-text dallas" id="largeCardText"></p>
                 </div>
-            </div>
-        </section>
+            </div> -->
+            </section>
 
-        <section container="fiveDayForecast" class="fiveDay">
-            <div class="card-group dayone">
+        <section id="fiveDayForecast" class="fiveDay">
+            <!-- <div class="card-group dayOneCard">
                 <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="placeholder" class="card-img-top" alt="">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title">Monday</h5>
+                        <p class="card-text day1"></p>
                     </div>
                 </div>
-                <div class="daytwo">
+                <div class="dayTwoCard">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                            content.</p>
+                        <h5 class="card-title">Tuesday</h5>
+                        <p class="card-text day2txt">Wednesday</p>
                     </div>
                 </div>
-                <div class="daythree">
+                <div class="dayThreeCard">
+                    <div class="grid text-center g-col-3 g-col-md-4">
+                      </div>
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        <h5 class="card-title">Thursday</h5>
+                        <p class="card-text day3txt"></p>
+                    </div>
+                </div>
+                <div class="dayFourCard">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Friday</h5>
+                        <p class="card-text day4txt">This is a wider card with supporting text below as a natural lead-in to
                             additional content. This card has even longer content than the first to show that equal
                             height action.</p>
                     </div>
                 </div>
-                <div class="dayfour">
+                <div class="dayFiveCard">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to show that equal
-                            height action.</p>
+                        <h5 class="card-title"></h5>
+                        <p class="card-text day5txt"></p>
                     </div>
                 </div>
-                <div class="dayfive">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural
-                            lead-in to
-                            additional content. This card has even longer content than the first to show
-                            that equal
-                            height action.</p>
-                    </div>
-                </div>
-        </section>
+        </section> -->
+        </div>
+
+    </main>
+    <footer></footer>
+        
+       
 
 
 
@@ -94,7 +95,7 @@
 
 
 
-        <script src="./assets/Weather.js"></script>
+        <script src="./assets/weather.js"></script>
 </body>
 
 </html>

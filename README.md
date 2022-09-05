@@ -20,14 +20,14 @@ Weather Alerts in multiple cities!
 
 
 ## User Story 
-* AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly.
+* As a  traveler
+I want to see the weather outlook for multiple cities
+So that I can plan a trip accordingly.
 
 
 ## Issues and Learned Experiences 
-* 
-* 
+* fetching API with longitude and latitude adjustments
+* dynamically creating elements aligned with data 
 * 
 
 ### Credits 
