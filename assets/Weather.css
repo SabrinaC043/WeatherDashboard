@@ -6,7 +6,7 @@ h1 {
 }
 
 
-.list-group{
+.sidebar{
     display:inline-block;
 }
 
@@ -19,11 +19,36 @@ h1 {
 }
 
 
+#searchCityList {
+    width:54%;
+    font-size:12px;
+}
+
+.searchcitybtn{
+background-color: blue;
+color:white;
+font-size: 10px;
+width:54%;
+}
 
 
 
+text {
+    color:black;
+    font-size:10px;
+    font-style: italic;
+}
+.sidebar{
+display:flex; 
+flex-direction: column;
+justify-content: left;
 
+}
+#sameDayLgDisplay {
+    width:80%;
+    justify-content:right;
 
+}
 
 
 
