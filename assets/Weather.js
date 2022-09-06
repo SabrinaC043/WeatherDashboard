@@ -1,8 +1,7 @@
 var apiKey = 'd91f911bcf2c0f925fb6535547a5ddc9' //temp apikey
 var searchForm = document.getElementById('search-form');
 var userInput = document.getElementById('userInput');
-var sameDayLgDisplay = document.getElementById('sameDayLgDisplay');//does this one change at all upon click, it doesn't really say?
-var largeCardText = document.getElementsByClassName('card-text'); //plug in API data into the text. 
+var sameDayLgDisplay = document.getElementById('sameDayLgDisplay');//does this one change at all upon click, it doesn't really say? 
 var fiveDayForeCastContainer = document.getElementById('fiveDayForecast'); // five day card container
 
 
@@ -38,9 +37,10 @@ function fetchOneCall(coords){
         // traverse the data and create variables for all the content from the data
         var temp = data.current.temp;
         var uvi = data.current.uvi;
-        var humidity = data.current.humdity;
+        var humidity = data.current.humidity;
         var wind = data.current.wind_speed;
         var icon =data.current.weather[0].icon;
+        console.log(icon);
         // create all the new elements for the card to house all the info
        var card= document.createElement('div');
        var cardBody= document.createElement('div');
@@ -49,7 +49,7 @@ function fetchOneCall(coords){
        var uviEl=document.createElement('p');
        var humidityEl=document.createElement('p');
        var windEl=document.createElement('p');
-       var iconEl=document.createElement('img');
+       var iconEl=document.createElement('img'); 
        // set attributes
        card.setAttribute('class', 'card mb-3');
        cardBody.setAttribute('class', 'card-body');
@@ -60,23 +60,14 @@ function fetchOneCall(coords){
        windEl.setAttribute('class','card-text');
        iconEl.setAttribute('class', 'img');
 
-
-        //append the content to the new element
-        // card.textContent=temp;
-        // cardBody.textContent=uvi;
-        // cardTitle.textContent=humidity;
-    
+        iconEl.src='http://openweathermap.org/img/wn/'+ icon + '.png';
         cardTitle.textContent=name;
-        tempEl.textContent=temp;
-        uviEl.textContent=uvi;
-        humidityEl.textContent=humidity;
-        windEl.textContent=wind;
-       // how do I get an icon to show?? 
-        iconEl.appendContent=icon;
+        tempEl.textContent= 'Temperature: ' + temp + '°F' ;
+        uviEl.textContent= 'UV index: ' +  uvi ;
+        humidityEl.textContent= 'Humidity:' + humidity + '%';
+        
+        windEl.textContent= 'Wind Speed:' +  wind + 'mph';
 
-        // iconEl.lastElementChild=icon;
-
-        //append the new elements to the sameDayLgDisplay
         sameDayLgDisplay.appendChild(card);
         sameDayLgDisplay.appendChild(cardBody);
         sameDayLgDisplay.appendChild(cardTitle);
@@ -86,8 +77,15 @@ function fetchOneCall(coords){
         sameDayLgDisplay.appendChild(windEl);
         sameDayLgDisplay.appendChild(iconEl);
 
-        console.log(card);
 
+        fiveDayForeCastContainer.appendChild(card);
+        fiveDayForeCastContainer.appendChild(cardBody);
+        fiveDayForeCastContainer.appendChild(cardTitle);
+        fiveDayForeCastContainer.appendChild(tempEl);
+        fiveDayForeCastContainer.appendChild(uviEl);
+        fiveDayForeCastContainer.appendChild(humidityEl);
+        fiveDayForeCastContainer.appendChild(windEl);
+        fiveDayForeCastContainer.appendChild(iconEl);
 
  });
 }
