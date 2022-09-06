@@ -12,27 +12,27 @@
 </head>
 
 <body>
-    <header class="p-2 container-fluid text-center bg-$purple-400 text-white">
+    <header class="p-2 container-fluid text-center bg-primary text-white">
         <h1>Weather Dashboard</h1>
     </header>
     <main class="row container-fluid">
         <div  class="list-group sidebar col-md-2">
             <form id="search-form">
-                <label class="form-label" for="searcgCityList">Search for a City:</label>
+                <label class="form-label" for="searchCityList">Search for a City:</label>
                 <input class="form-control"  id="userInput"
                 placeholder="Type in a city">
                 <button type="submit" class="searchcitybtn btn btn-primary">Search</button>
-                <p> Your search must be a city location.(ex: Denver, Houston)</p>
+                <p>(ex: Denver)</p>
             </form>
             <hr>
             <div id="searchHistory"></div>
         </div>
         <div class="col-md-10">
              <section id="sameDayLgDisplay">
-            <!-- <div class="card mb-3  Dallas">
-                <div class="card-body dallasCard">
+            <!-- <div class= "card mb-3">
+                <div class="card-body">
                     <h5 class="card-title dallas">Dallas</h5>
-                    <p class="card-text dallas" id="largeCardText"></p>
+                    <p class="card-text" id="largeCardText"></p>
                 </div>
             </div> -->
             </section>
