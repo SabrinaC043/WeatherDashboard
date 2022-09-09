@@ -131,7 +131,7 @@ function fetchOneCall(coords) {
             var cards = [ fiveDayForeCast1 , fiveDayForeCast2 , fiveDayForeCast3 , fiveDayForeCast4, fiveDayForeCast5]
             for (let i = 0; i < cards.length; i++) {
                 cards = fiveDayForeCast[i]
-            } (
+            } 
 
 
 
@@ -156,9 +156,9 @@ function fetchOneCall(coords) {
 
        // button for history created-#1 
 
-     var searchBtnEl = document.createElement('button');
-            searchBtnEl.setAttribute('class', 'searchHistorybtn btn btn-secondary');
-            searchHistory.textContent = searchBtnEl + city;
+    //  var searchBtnEl = document.createElement('button');
+    //         searchBtnEl.setAttribute('class', 'searchHistorybtn btn btn-secondary');
+    //         searchHistory.textContent = searchBtnEl + city;
 
         })
 };
