@@ -6,7 +6,6 @@ var sameDayLgDisplay = document.getElementById('sameDayLgDisplay');//does this o
 var fiveDayForeCast = document.getElementById('fiveDayForecast'); // five day card container
 
 
-
 function handleFormSubmit(e) {
     if (!userInput.value) {
         return;
@@ -93,10 +92,8 @@ function fetchOneCall(coords) {
         var windDaily = data.daily[0].wind_speed;
         var iconDaily = data.daily[0].weather[0].icon;
         // console.log(iconDaily);
-        // console.log(humidityDaily);
-        //  console.log(windDaily);
 
-        var cardDaily = document.createElement('div');
+        var cardDailyEl = document.createElement('div');
         var cardBodyDaily = document.createElement('div');
         var cardTitleDaily = document.createElement('h5');
         var dailyDateEl = document.createElement('p');
@@ -105,7 +102,7 @@ function fetchOneCall(coords) {
         var windDailyEl = document.createElement('p');
         var iconDailyEl = document.createElement('img');
 
-        cardDaily.setAttribute('class', 'card mb-2');
+        cardDailyEl.setAttribute('class', 'card mb-2');
         cardBodyDaily.setAttribute('class', 'card-body');
         cardTitleDaily.setAttribute('class', 'card-text');
         dailyDateEl.setAttribute('class', 'card-text');
@@ -120,41 +117,51 @@ function fetchOneCall(coords) {
         windDailyEl.textContent = 'Wind Speed:' + windDaily + 'MPH';
         humidityDailyEl.textContent = 'Humidity:' + humidityDaily + '%';
         iconDailyEl.src = 'http://openweathermap.org/img/wn/' + iconDaily + '.png';
+        
+       
 
-        fiveDayForeCast.appendChild(cardDaily);
+        fiveDayForeCast.appendChild(cardDailyEl);
         fiveDayForeCast.appendChild(cardBodyDaily);
         fiveDayForeCast.appendChild(cardTitleDaily);
         fiveDayForeCast.appendChild(dailyTempEl);
         fiveDayForeCast.appendChild(windDailyEl);
         fiveDayForeCast.appendChild(humidityDailyEl);
         fiveDayForeCast.appendChild(iconDailyEl);
+        
+        
 
+        
+        
+        // what are you trying to do here? 
+        // I want the futureConditions to display 5 cards of information 
+       
+        // what do you need? 
+        // I need the futureConditions I created and five cards 
+        // what do you have? 
+        // I have 1 card and 1 current day 
+        // why? because I tried to add a +1 to increment it up but that is not correct, when I looked at the documentation 
+        // it said to use SET Date () +1 
+        // tried to plug it in and it failed because it added a 1 in the date instead of adding a 9+1=10 to display tomorrow 
+
+
+        // for the i index position equals 5 what why? this is wrong what does it need to be, what are we iterating through? what do you want to create copies of? Not the 
+        // // container the content within the container, it is all separated, 
+
+       
+    
+        
 
        // button for history created-#1 
 
-      var historyButton=document.createElement('button');
-      searchHistory.setAttribute('class', 'btn btn-secondary');
-      searchHistory.textContent='';
-      searchForm.AppendChild(historyButton);
+     var searchBtnEl=document.createElement('button');
+     searchBtnEl.setAttribute('class', 'searchHistorybtn btn btn-secondary');
+     searchHistory.textContent= searchBtnEl + city;
      
+    })
+};
 
 
 
+  
 
-        
-  }
-    )};
-
-
-
-
-
-
-
-
-
-
-
-
-// // localStorage.setItem('city')
 searchForm.addEventListener('submit', handleFormSubmit)
