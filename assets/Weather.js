@@ -82,11 +82,13 @@ function fetchOneCall(coords) {
         sameDayLgDisplay.appendChild(windEl);
         sameDayLgDisplay.appendChild(iconEl);
 
-
-
-        var dailyDate = new Date().d(year).d(timezone);
-        var dailyTemp = data.daily[0].temp.day;
+        var today= new Date();
+        var date =today.getMonth()+1 + '/'+ today.getDate() + '/' + (today.getFullYear());
+        
+        
         // console.log(data);
+        // console.log(today);
+        var dailyTemp = data.daily[0].temp.day
         var humidityDaily = data.daily[0].humidity;
         var windDaily = data.daily[0].wind_speed;
         var iconDaily = data.daily[0].weather[0].icon;
@@ -113,7 +115,7 @@ function fetchOneCall(coords) {
         iconDailyEl.setAttribute('class', 'img');
    
         
-        cardTitleDaily.textContent = dailyDate;
+        cardTitleDaily.textContent = date;
         dailyTempEl.textContent = 'Temperature: ' + dailyTemp + '°F';
         windDailyEl.textContent = 'Wind Speed:' + windDaily + 'MPH';
         humidityDailyEl.textContent = 'Humidity:' + humidityDaily + '%';
@@ -126,44 +128,33 @@ function fetchOneCall(coords) {
         fiveDayForeCast.appendChild(windDailyEl);
         fiveDayForeCast.appendChild(humidityDailyEl);
         fiveDayForeCast.appendChild(iconDailyEl);
-        console.log(dailyTime);
+
+
+       // button for history created-#1 
+
+      var historyButton=document.createElement('button');
+      searchHistory.setAttribute('class', 'btn btn-secondary');
+      searchHistory.textContent='';
+      searchForm.AppendChild(historyButton);
+     
+
+
+
+
+        
   }
     )};
 
 
+
+
+
+
+
+
+
+
+
+
 // // localStorage.setItem('city')
-// searchForm.addEventListener('submit', handleFormSubmit)
-//     // searchBtn.addEventListener('click', (function (searchHistory) {
-//     //     if (userInput>0&&searchHistory) {};
-
-// ('.submitBtn').on(click, function(){
-// var key = $(this).parent().attr('id');
-// var value= $(this).siblings('.card-text').val();
-
-// localStorage.setItem(key, value)
-
-// });
-// $('userInput .form-control').val(localStorage.getItem(userInput));
-// function loop() {
-//     var userInputComplete=parseInt($(this).attr(id));
-//     if 
-// }
-
-
-
-
-
-
-
-
-// var searchHistory=document.getElementById('searchHistory');
-// var historyText=document.createElement('p')
-// var searchButtonEl=document.createElement('btn');
-
-// searchButtonEl.textContent= nameof;
-
-// searchButtonEl.setAttribute('class' , 'submit btn btn-secondary text-black btn-lg');
-
-
-// historyBody.appendChild(searchButtonEl);
-// searchHistory.appendChild(searchHistory)
+searchForm.addEventListener('submit', handleFormSubmit)
