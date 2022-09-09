@@ -1,5 +1,5 @@
 # WeatherDashboard
-Weather Alerts in multiple cities! 
+Weather information for multiple cities! 
 
 ## Motivation 
 * 
