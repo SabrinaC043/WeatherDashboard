@@ -5,7 +5,6 @@ var userInput = document.getElementById('userInput');
 var sameDayLgDisplay = document.getElementById('sameDayLgDisplay');//does this one change at all upon click, it doesn't really say? 
 var fiveDayForeCast = document.getElementById('fiveDayForeCast'); // five day card container
 const body= document.body 
-
 function handleFormSubmit(e) {
     if (!userInput.value) {
         return;
@@ -40,7 +39,7 @@ function fetchOneCall(coords) {
         .then(function (data) {
 
             createCurrentWeatherCard(data, name)
-            futureWeatherConditions(data,daily)
+            futureWeatherConditions(data)
             
         })
 }
@@ -67,7 +66,7 @@ function createCurrentWeatherCard(data,name) {
     var iconEl = document.createElement('img');
     // set attributes
 
-    card.setAttribute('class', 'card col.row-mb-3');
+    card.setAttribute('class', 'card col.row-mb-3-bg-color-primary');
     cardBody.setAttribute('class', 'card-body');
     cardTitle.setAttribute('class', 'card-title');
     tempEl.setAttribute('class', 'card-text');
@@ -78,9 +77,17 @@ function createCurrentWeatherCard(data,name) {
 
     
     cardTitle.textContent = name + formattedDate;
-    console.log(name)
     tempEl.textContent = 'Temperature: ' + temp + '°F';
     uviEl.textContent = 'UV index: ' + uvi;
+    if(uvi<5){
+        
+        uvi.setAttribute('style', 'text-bg-success p-3');
+    }
+    else if(uvi>8){
+        uvi.setAttribute('style', 'text-bg-warning p-3');
+    }
+    else {uvi.setAttribute('style', 'text-bg-danger p-3')
+}
     humidityEl.textContent = 'Humidity:' + humidity + '%';
     windEl.textContent = 'Wind Speed:' + wind + 'MPH';
     iconEl.src = 'http://openweathermap.org/img/wn/' + icon + '.png'
@@ -143,19 +150,21 @@ function futureWeatherConditions(data) {
         cardBody.appendChild(windDaily);
         cardBody.appendChild(iconDaily);
         
-        searchHistory(history,list);
+    
     }
 
 }
 
-function searchHistory(history,list) {
-var searchHistory=document.getElementsByClassName("searchHistoryList");
-// var uoList=document.createElement('ul');
-// var listItem=document.createElement('li')
-var searchBtn= document.createElement('button');
-var searchText=document.createElement('p');
 
-text.Content.searchBtn= 'atlanta';
+// function searchHistory(list) {
+//     list=();
+// var searchHistory=document.getElementsByClassName("searchHistoryList");
+// // var uoList=document.createElement('ul');
+// // var listItem=document.createElement('li')
+// var searchBtn= document.createElement('button');
+// var searchText=document.createElement('p');
+
+// text.Content.searchBtn= 'atlanta';
 
 
 
@@ -163,17 +172,17 @@ text.Content.searchBtn= 'atlanta';
 // textContent.searchHistory=searchBtn;
 // textContent.searchBtn= searchHistory+city;
 // searchHistory.setAttribute('class','list');
-searchBtn.setAttribute('class', 'btn btn-secondary');
-searchText.setAttribute('class', 'btn text');
+// searchBtn.setAttribute('class', 'btn btn-secondary');
+// searchText.setAttribute('class', 'btn text');
 
 // uoList.setAttribute('class', 'list-style-type-none');
 // listItem=document.
 
 
 
-if (handleFormSubmit){
-    return searchHistory; }
-}
+// if (handleFormSubmit){
+//     return searchHistory; 
+// }
 
 
 
