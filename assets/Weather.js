@@ -153,16 +153,17 @@ function futureWeatherConditions(data) {
 
 }
 
-
+function searchHistoryButton(){
 var searchHistory=document.getElementById('searchHistory');
-var searchBtn=document.createElement('button')
+var searchBtn=document.createElement('button');
 
-
-searchHistory.setAttribute('class', 'row row-cols-md-2 g-4');
+searchHistory=setAttribute('class', 'row row-cols-md-2 g-4');
 searchBtn=setAttribute('class', 'btn btn-secondary');
-body.append(searchHistory)
 
-searchHistory.addEventListener.on('click', function () {
+body.append(searchHistory);
+body.searchHistory.appendChild(searchBtn);
+
+searchBtn.addEventListener.on('click', function () {
 var key=$(this).parent().attr('id');
 var value =$(this).sibling().attr('button').val();
 localStorage.setItem(key, value)
@@ -174,10 +175,7 @@ for (i=0; i < searchBtn.length; i++)
  { document.body.children[1];
 searchBtn.textContent='userInput';
 e.preventDefault();
-}
-
-
-
+}};
 
 searchForm.addEventListener('submit', handleFormSubmit)
-searchHistory.addEventListener('click',function())
+searchHistory.addEventListener('click', searchHistoryButton)
