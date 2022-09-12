@@ -79,15 +79,13 @@ function createCurrentWeatherCard(data,name) {
     cardTitle.textContent = name + formattedDate;
     tempEl.textContent = 'Temperature: ' + temp + '°F';
     uviEl.textContent = 'UV index: ' + uvi;
-    if(uvi<5){
-        
-        uvi.setAttribute('style', 'text-bg-success p-3');
-    }
-    else if(uvi>8){
-        uvi.setAttribute('style', 'text-bg-warning p-3');
-    }
-    else {uvi.setAttribute('style', 'text-bg-danger p-3')
-}
+    // if(uvi<=5){ 
+    // }else if (uvi>=7){
+
+    // } else{
+
+    // }
+
     humidityEl.textContent = 'Humidity:' + humidity + '%';
     windEl.textContent = 'Wind Speed:' + wind + 'MPH';
     iconEl.src = 'http://openweathermap.org/img/wn/' + icon + '.png'
@@ -156,37 +154,30 @@ function futureWeatherConditions(data) {
 }
 
 
-// function searchHistory(list) {
-//     list=();
-// var searchHistory=document.getElementsByClassName("searchHistoryList");
-// // var uoList=document.createElement('ul');
-// // var listItem=document.createElement('li')
-// var searchBtn= document.createElement('button');
-// var searchText=document.createElement('p');
-
-// text.Content.searchBtn= 'atlanta';
+var searchHistory=document.getElementById('searchHistory');
+var searchBtn=document.createElement('button')
 
 
+searchHistory.setAttribute('class', 'row row-cols-md-2 g-4');
+searchBtn=setAttribute('class', 'btn btn-secondary');
+body.append(searchHistory)
 
-// textContent.uoList=
-// textContent.searchHistory=searchBtn;
-// textContent.searchBtn= searchHistory+city;
-// searchHistory.setAttribute('class','list');
-// searchBtn.setAttribute('class', 'btn btn-secondary');
-// searchText.setAttribute('class', 'btn text');
+searchHistory.addEventListener.on('click', function () {
+var key=$(this).parent().attr('id');
+var value =$(this).sibling().attr('button').val();
+localStorage.setItem(key, value)
+});
 
-// uoList.setAttribute('class', 'list-style-type-none');
-// listItem=document.
+$('#searchHistory .btn').val(localStorage.getItem('btn'));
 
-
-
-// if (handleFormSubmit){
-//     return searchHistory; 
-// }
-
-
+for (i=0; i < searchBtn.length; i++)
+ { document.body.children[1];
+searchBtn.textContent='userInput';
+e.preventDefault();
+}
 
 
 
 
 searchForm.addEventListener('submit', handleFormSubmit)
+searchHistory.addEventListener('click',function())
