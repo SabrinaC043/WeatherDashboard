@@ -30,6 +30,6 @@ So that I can plan a trip accordingly.
 ### Credits 
 * Special thanks to the API weather dashboard, provided super quick keys for accessing the API. 
 ### Deployed Link 
-<link src= https://sabrinac043.github.io/WeatherDashboard/?>
+<link src= https://sabrinac043.github.io/WeatherDashboard/?/>
 
 <img src='/Users/sabrinacarrion/Desktop/weather-dashboard/weather-dashboard/assets/Screen Shot 2022-09-13 at 9.08.16 AM.png' alt= "Image of beginning search for a a City"/>
